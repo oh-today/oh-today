@@ -26,10 +26,13 @@ public class Article {
     @Column(length = 32)
     private String id;
 
+    @Column(length = 1000)
     private String thumb;
 
+    @Column(length = 1000)
     private String title;
 
+    @Column(length = 1000)
     private String resourceUrl;
 
     @AttributeOverrides({

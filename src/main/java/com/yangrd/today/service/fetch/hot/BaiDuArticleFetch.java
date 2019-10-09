@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @author yangrd
  * @date 2019/10/09
  */
-@Component
+//@Component
 public class BaiDuArticleFetch extends AbstractArticleFetch {
 
     String url = "http://top.baidu.com/buzz?b=341&c=513&fr=topbuzz_b1";

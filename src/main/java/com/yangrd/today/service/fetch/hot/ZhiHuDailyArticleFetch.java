@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @author yangrd
  * @date 2019/10/09
  */
-@Component
+//@Component
 public class ZhiHuDailyArticleFetch extends AbstractArticleFetch {
 
     String url = "http://daily.zhihu.com/";

@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  * @author yangrd
  * @date 2019/10/09
  */
-@Component
+//@Component
 public class V2exArticleFetch extends AbstractArticleFetch {
 
     String url = "https://www.v2ex.com/?tab=hot";

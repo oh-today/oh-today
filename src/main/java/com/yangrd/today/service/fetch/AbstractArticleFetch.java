@@ -35,7 +35,7 @@ public abstract class AbstractArticleFetch implements ArticleFetch {
                     .header("Accept-Language","zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3")
                     .header("Content-Type", "application/json;charset=UTF-8")
                     .header("User-Agent","Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0")
-                    .timeout(10000).ignoreContentType(true).execute();
+                    .timeout(5000).ignoreContentType(true).execute();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -44,7 +44,7 @@ public abstract class AbstractArticleFetch implements ArticleFetch {
 
     protected Document getDocument(String url) {
         try {
-            return Jsoup.connect(url).userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36").timeout(35000).get();
+            return Jsoup.connect(url).userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36").timeout(5000).get();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -53,7 +53,7 @@ public abstract class AbstractArticleFetch implements ArticleFetch {
 
     protected Document getDocument(String url, Map<String, String> headers) {
         try {
-            return Jsoup.connect(url).headers(headers).userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36").timeout(15000).get();
+            return Jsoup.connect(url).headers(headers).userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36").timeout(5000).get();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -63,7 +63,7 @@ public abstract class AbstractArticleFetch implements ArticleFetch {
 
     protected Document getDocument(String url, String header, String headerVal) {
         try {
-            return Jsoup.connect(url).header(header, headerVal).userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36").timeout(15000).get();
+            return Jsoup.connect(url).header(header, headerVal).userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36").timeout(5000).get();
         } catch (IOException e) {
             e.printStackTrace();
         }

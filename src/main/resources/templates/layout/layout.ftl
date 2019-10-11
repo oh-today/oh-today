@@ -54,13 +54,13 @@
                         </div>
                         <div class="search-item">
                             <a href="#">
-                                <img class="mr-3 rounded" width="30" src="assets/img/products/product-3-50.png" alt="product">
+                                <img class="mr-3 rounded" width="30" src="/assets/img/products/product-3-50.png" alt="product">
                                 知乎
                             </a>
                         </div>
                         <div class="search-item">
                             <a href="#">
-                                <img class="mr-3 rounded" width="30" src="assets/img/products/product-2-50.png" alt="product">
+                                <img class="mr-3 rounded" width="30" src="/assets/img/products/product-2-50.png" alt="product">
                                 v2ex
                             </a>
                         </div>
@@ -68,29 +68,26 @@
                     </div>
                 </div>
             </form>
-            <!--<ul class="navbar-nav navbar-right">
+            <ul class="navbar-nav navbar-right">
 
                <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                 <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                 <img alt="image" src="/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
                  <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
                  <div class="dropdown-menu dropdown-menu-right">
-                   <div class="dropdown-title">Logged in 5 min ago</div>
+                   <div class="dropdown-title">您好</div>
                    <a href="features-profile.html" class="dropdown-item has-icon">
-                     <i class="far fa-user"></i> Profile
+                     <i class="far fa-user"></i> 个人信息
                    </a>
-                   <a href="features-activities.html" class="dropdown-item has-icon">
-                     <i class="fas fa-bolt"></i> Activities
-                   </a>
-                   <a href="features-settings.html" class="dropdown-item has-icon">
-                     <i class="fas fa-cog"></i> Settings
+                   <a href="#" class="dropdown-item has-icon">
+                     <i class="fas fa-cog"></i> 设置
                    </a>
                    <div class="dropdown-divider"></div>
-                   <a href="#" class="dropdown-item has-icon text-danger">
-                     <i class="fas fa-sign-out-alt"></i> Logout
+                   <a href="/logout" class="dropdown-item has-icon text-danger">
+                     <i class="fas fa-sign-out-alt"></i> 退出
                    </a>
                  </div>
                </li>
-             </ul>-->
+             </ul>
         </nav>
         <div class="main-sidebar sidebar-style-2">
             <aside id="sidebar-wrapper">
@@ -139,7 +136,7 @@
         </div>
         <footer class="main-footer">
             <div class="footer-left">
-                Copyright &copy; 2019
+                Copyright &copy; Oh Today 2019
             </div>
             <div class="footer-right">
 

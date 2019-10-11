@@ -22,12 +22,10 @@ export default new Router({
           component: () => import(/* webpackChunkName: "about" */ './views/pages/Home.vue')
         },
         {
-          path: '/site',
+          path: '/site/:id',
           name: 'site',
-          // route level code-splitting
-          // this generates a separate chunk (about.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
-          component: () => import(/* webpackChunkName: "about" */ './views/pages/Site.vue')
+          props: true,
+          component: () => import('./views/pages/Site.vue')
         }
       ]
     },

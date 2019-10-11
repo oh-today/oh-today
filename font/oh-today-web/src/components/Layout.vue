@@ -85,7 +85,7 @@
                     <li class="dropdown">
                         <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>我的订阅</span></a>
                         <ul class="dropdown-menu">
-                            <li ><router-link class="nav-link" to="/site">site</router-link></li>
+                            <li v-for="site in sites" :key="site.id"><router-link class="nav-link" :to="'/site/'+site.id" >{{site.name | sub8}}</router-link></li>
                         </ul>
                     </li>
                 </ul>
@@ -103,11 +103,11 @@
             <section class="section">
                 <div class="section-header">
                     <h1>知乎</h1>
-                    <div class="section-header-breadcrumb">
+                    <!-- <div class="section-header-breadcrumb">
                        
                             <div class="breadcrumb-item active"><a href="#">我的订阅</a></div>
                         <div class="breadcrumb-item">知乎</div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="section-body">
@@ -128,7 +128,23 @@
 </template>
 
 <script>
+import { listSiteAll } from "@/api/home";
 export default {
-  name: 'Layout'
-}
+  name: 'Layout',
+  data() {
+    return {
+      sites: []
+    };
+  },
+  mounted() {
+    listSiteAll().then(res => {
+      this.sites = res.data.content;
+    });
+  },
+  filters:{
+      sub8(v){
+          return v.length>10?v.substring(0,10):v
+      }
+  }
+};
 </script>

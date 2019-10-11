@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body">
                     <ul class="list-group">
-                        <li class="list-group-item"><router-link  to="/"> 知乎</router-link></li>
+                        <li class="list-group-item" v-for="(article,index) in articles" :key="index"> <span v-text="index+1" style="font-weight:500"></span>. &nbsp;&nbsp;<a  :href="article.resourceUrl" target="_blank" v-text="article.title"> 知乎</a></li>
                     </ul>
                 </div>
             </div>
@@ -23,3 +23,31 @@
         </div> 
    </div>
 </template>
+<script>
+import { listArticle } from "@/api/site";
+export default {
+    props:{
+        id:String
+    },
+    data(){
+        return {
+            articles:[]
+        }
+    },
+    methods:{
+        loadData(){
+            listArticle({siteId: this.id}).then(res=>{
+                this.articles = res.data.content
+            })
+        }
+    },
+    watch:{
+        id(){
+            this.loadData()
+        }
+    },
+    mounted(){
+        this.loadData()
+    }
+}
+</script>

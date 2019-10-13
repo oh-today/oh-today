@@ -1,6 +1,6 @@
 package com.yangrd.today;
 
-import com.yangrd.today.utils.MD5Utils;
+import com.yangrd.today.modules.utils.MD5Utils;
 import org.junit.Test;
 
 import java.net.MalformedURLException;
@@ -22,5 +22,6 @@ public class OhTodayApplicationTests {
         System.out.println(MD5Utils.getMd5("https://github.com/tophubs/TopList/blob/master/Config/MySql.go").length());
 
     }
+
 
 }

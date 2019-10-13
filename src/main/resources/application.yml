@@ -1,5 +1,5 @@
 logging:
   level:
-    com.yangrd: debug
+    com.yangrd: info
 server:
   port: 8061

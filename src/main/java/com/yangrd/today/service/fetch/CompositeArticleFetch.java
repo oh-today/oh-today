@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -27,7 +28,7 @@ public class CompositeArticleFetch extends AbstractArticleFetch {
 
     @Override
     public Collection<Article> fetch() {
-        return articleFetches.stream().map(articleFetch -> {
+        List<Article> articleList = articleFetches.stream().map(articleFetch -> {
             String fetchName = articleFetch.getClass().getSimpleName().replace(ArticleFetch.class.getSimpleName(), "");
             log.info("[{}] 开始抓取", fetchName);
             Collection<Article> articles = Collections.emptyList();
@@ -39,5 +40,7 @@ public class CompositeArticleFetch extends AbstractArticleFetch {
             articles.forEach(article -> log.debug("{}", JSON.toJSONString(article)));
             return articles;
         }).flatMap(Collection::stream).collect(Collectors.toList());
+        log.info("全部抓取完成");
+        return articleList;
     }
 }

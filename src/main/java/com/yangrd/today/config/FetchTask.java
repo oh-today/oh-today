@@ -19,9 +19,9 @@ public class FetchTask {
     private ArticleService articleService;
 
     /**
-     * 十分钟执行一次
+     * 半小时执行一次
      */
-    @Scheduled(fixedDelay = 600000)
+    @Scheduled(fixedDelay = 1800000)
     public void fetchJob() {
         articleService.pushArticles();
     }

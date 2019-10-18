@@ -23,6 +23,6 @@ public class FetchTask {
      */
     @Scheduled(fixedDelay = 1800000)
     public void fetchJob() {
-        articleService.pushArticles();
+        articleService.fetch2Save();
     }
 }

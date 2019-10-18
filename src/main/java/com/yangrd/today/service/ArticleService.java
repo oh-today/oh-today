@@ -25,7 +25,7 @@ public class ArticleService {
 
     private ArticleRepository repository;
 
-    public void pushArticles(){
+    public void fetch2Save(){
         Collection<Article> articles = articleFetch.fetch();
         repository.saveAll(articles);
     }

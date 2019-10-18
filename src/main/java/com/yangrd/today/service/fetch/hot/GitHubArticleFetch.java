@@ -4,6 +4,7 @@ import com.yangrd.today.model.Article;
 import com.yangrd.today.service.fetch.AbstractArticleFetch;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -14,7 +15,7 @@ import java.util.stream.Collectors;
  * @author yangrd
  * @date 2019/10/09
  */
-//@Component
+@Component
 public class GitHubArticleFetch extends AbstractArticleFetch {
 
     String url = "https://github.com/trending";

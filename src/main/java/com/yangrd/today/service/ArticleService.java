@@ -2,6 +2,7 @@ package com.yangrd.today.service;
 
 import com.yangrd.today.model.Article;
 import com.yangrd.today.repository.ArticleRepository;
+import com.yangrd.today.service.fetch.ArticleFetch;
 import com.yangrd.today.service.fetch.CompositeArticleFetch;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,7 @@ import java.util.Collection;
 @Service
 public class ArticleService {
 
-    private CompositeArticleFetch articleFetch;
+    private ArticleFetch articleFetch;
 
     private ArticleRepository repository;
 
